@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<br>
+	<div class="container">
+		<table class="table table-bordered">
+			{% for file in files %}
+			<tr>
+				<td>{{file.id}}</td>
+				<td><center>{{file.name}}</center></td>						
+				<td><center><a href="/download/{{file.name}}">Download</a></center></td>
+				<td><center><a href="/del/{{file.id}}">Delete</a></center></td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endblock %}
